@@ -1,0 +1,13 @@
+[
+    {
+            "productPermalink": "ranger-boot",
+            "productTitle": "Red Wing Iron Ranger Boot",
+            "productPrice": "310",
+            "productDescription": "<p style=\"margin-bottom: 25px; text-rendering: optimizeLegibility;\">The Mesabi Iron Range lies in northern Minnesota, a rugged and remote area known for its iron mines. The local residents who work these mines are proudly known as Iron Rangers, individuals with a sense of adventure and a determined personality. Originally designed to be worn in the iron mines, Iron Ranger work boots had to be as tough as the people who wore them in demanding conditions. Iron Ranger boots are built with a double layer of leaver over the toe to provide an extra measure of safety.<\/p><ul class=\"tabs-content\" style=\"margin-right: 0px; margin-bottom: 25px; margin-left: 20px; padding: 0px; text-rendering: optimizeLegibility;\"><li style=\"margin-bottom: 0px;\">6 inch, Amber Harness leather with Nitrile Cork sole.<\/li><\/ul>",
+            "productPublished": "true",
+            
+            "productTags": "ranger, boot, leather",
+            "productImage": "products/img/ranger-boot/boot_grande.jpg",
+            "productOptions": "{\"size\":{\"optName\":\"size\",\"optLabel\":\"Select size\",\"optType\":\"select\",\"optOptions\":[\"7.5\",\"8\",\"8.5\",\"9\",\"9.5\",\"10\",\"10.5\",\"11\"]}}"
+        }
+]
