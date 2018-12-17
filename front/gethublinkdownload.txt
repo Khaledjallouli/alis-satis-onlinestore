@@ -1,0 +1,5 @@
+https://github.com/LostInBrittany/polymer3-beers
+connect server in folder: polymer server
+connect website http://localhost:8081/app/index.html
+
+https://www.webcomponents.org/ library bcp components
