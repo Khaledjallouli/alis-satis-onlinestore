@@ -1,0 +1,10 @@
+{
+	"productPermalink": "duckworth-jacket",
+    "productTitle": "Duckworth Woolfill Jacket",
+    "productPrice": "188.00",
+    "productDescription": "<p style=\"margin-bottom: 25px; text-rendering: optimizeLegibility;\">Inspired by the timeless, functional style of your grandfather's work coat, the Foraker features brass buttons and 4 patch pockets. Crafted in Bristol, Tennessee, our 10oz organic duck canvas is light enough for an early summer morning, but rugged enough to handle your days work.<\/p><ul class=\"tabs-content\" style=\"margin-right: 0px; margin-bottom: 25px; margin-left: 20px; padding: 0px; text-rendering: optimizeLegibility;\"><li style=\"margin-bottom: 0px;\">100% Organic Duck Canvas.<\/li><\/ul>",
+    "productPublished": "true",
+    "productTags": "organic, jacket",
+    "productOptions": "{\"Size\":{\"optName\":\"Size\",\"optLabel\":\"Select size\",\"optType\":\"select\",\"optOptions\":[\"S\",\"M\",\"L\",\"XL\"]},\"Colour\":{\"optName\":\"Colour\",\"optLabel\":\"Select colour\",\"optType\":\"select\",\"optOptions\":[\"Harvest\",\"Navy\"]}}",
+    "productImage": "products/img/duckworth-jacket/woolfill-jacket_6c39ae23-c0c8-4821-85f4-4b5d64333c62_grande.jpg"
+}
