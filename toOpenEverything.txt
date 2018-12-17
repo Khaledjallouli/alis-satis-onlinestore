@@ -1,0 +1,13 @@
+Front :
+cd (front path)
+ polymer serve
+Visit : http://127.0.0.1:8081
+
+Back: 
+cd (back path)
+node index.js
+Visit: http://localhost:3000/
+
+Database: 
+Terminal 1 :"C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --dbpath="c:\data\db"
+Terminal 2 : mongo ( to see the tables)
