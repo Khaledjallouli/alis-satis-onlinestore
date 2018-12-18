@@ -21,7 +21,7 @@ MongoClient.connect(url, function(err, db) {
 
 
 /*https://github.com/mschwarzmueller/nodejs-basics-tutorial */
-app.post('/post-product', function (req, res,next) {
+app.post('/post-product', async function (req, res,next) {
   var item = {
     productPermalink: req.body.productPermalink ,
     productTitle : req.body.productTitle,
@@ -32,16 +32,23 @@ app.post('/post-product', function (req, res,next) {
     productOptions : req.body.productOptions , 
     productImage : req.body.productImage ,
   };
-  MongoClient.connect(url, function(err, database) {
-    assert.equal(null,err);
-    const db = database.db('test');
-    db.collection('products').insertOne(item, function(err, result){
-      assert.equal(null,error);
-      console.log(item);
-      database.close();
+  console.log(req.params, req.body);
+
+    MongoClient.connect(url, function(err, database) {
+      assert.equal(null,err);
+      const db = database.db('test');
+      db.collection('products').insertOne(item, function(err, result){
+        assert.equal(null,err);
+        console.log('Inserted',item);
+        res.json(item);
+        console.log('got mongo result', item)
+        database.close();
+  
+      });
     });
-  });
-  res.redirect('/');
+
+
+  
 });
 
 
@@ -49,26 +56,6 @@ app.post('/post-product', function (req, res,next) {
 https://www.twilio.com/docs/voice/tutorials/click-to-call-node-express
 https://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js */
  /*https://expressjs.com/en/4x/api.html#req.body*/ 
-// add a document to the DB collection recording add product event
-/*app.post('/post-product', (req, res) => {
-                   
-                    console.log(req.body);
-  res.json(req.body);
-  console.log(product);
-  const db = database.db('test');
-  db.collection('products').save(product, (err, result) => {
-    if (err) {
-      return console.log(err);
-    }
-    console.log('product added to db');
-    res.sendStatus(201);
-  });
-
-});
-
-
-*/
-
 
 
 

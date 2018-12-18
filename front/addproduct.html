@@ -6,76 +6,13 @@ to connect : http://localhost:8081/step-04/index.html
 <head>
   <meta charset="utf-8">
   <title>Alis Satis - Add product</title>
-  <!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
-  <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
-        <script type="module" src="./elements/product-main.js"></script>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
         <script type="module" src="./elements/my-menu.js"></script>
         <script type="module" src="./elements/add-product.js"></script>
 
 </head>
 <body>
     <my-menu></my-menu>
-    <div style="margin:10%;margin-top:4%">
-        <div class="col-md-12">           
-            <h3 style="text-align:center"> Add a Product</h3> <br>  
-        </div>
-    
-    <form id="contactForm"  method="POST" action="/post-product">
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Product Permalink</label>
-            <input type="text" class="form-control" id="productPermalink" placeholder="Product Permalink" name="productPermalink" required>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputEmail4">Product Title</label>
-            <input type="text" class="form-control" id="productTitle" placeholder="Product Title" name="productTitle" required >
-          </div>
-        </div>
-        
-        <div class="form-row">
-            <div class="form-group col-md-5">
-                <label for="inputState" >Product Options</label>
-                <select id="productOptions" class="form-control" name ="productOptions">
-                  <option selected>Choose...</option>
-                  <option value="Green" >Green</option>
-                  <option value="Blue" >Blue</option>
-                  <option value="Red" >Red</option>
-                  <option value="White" >White</option>
-                </select>
-              </div>
-    
-          <div class="form-group col-md-5">
-            <label for="inputState" >Product Tags</label>
-            <select id="productTags" class="form-control" name ="productTags">
-              <option selected>Choose...</option>
-              <option value="panel" >Panel</option>
-              <option value="cap" >Cap</option>
-              <option value="organic" >Organic</option>
-              <option value="ranger" >Ranger</option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Price</label>
-            <input type="number" class="form-control" id="productPrice" name="productPrice">
-          </div>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Product Image</label>
-            <input type="file" class="form-control-file" id="productImage" name="productImage"  accept="image/png, image/jpeg, image/gif, image/jpg">
-          </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" id="productDescription" rows="3" name="productDescription" placeholder="Describe your product"></textarea>
-          </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="productPublished" name="productPublished">
-            <label class="form-check-label" for="gridCheck">
-                Publish Product
-            </label>
-          </div>
-        </div>
-        <button type="submit" id="login-form" class="btn btn-primary">Sign in</button>
-      </form>
-    </div></body>
+    <add-product></add-product>
+</body>
 </html>

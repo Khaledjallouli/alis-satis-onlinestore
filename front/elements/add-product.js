@@ -14,7 +14,7 @@ export class AddProduct extends PolymerElement {
         <h3 style="text-align:center"> Add a Product</h3> <br>  
     </div>
 
-<form id="contactForm"  method="POST" action="/post-product">
+<div  >
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Product Permalink</label>
@@ -69,8 +69,8 @@ export class AddProduct extends PolymerElement {
         </label>
       </div>
     </div>
-    <button type="submit" id="login-form" class="btn btn-primary" onclick="_sendData()">Sign in</button>
-  </form>
+    <button id="login-form" class="btn btn-primary" on-click="_sendData">Sign in</button>
+  </div>
 </div>
 
 
@@ -96,76 +96,43 @@ constructor() {
 
 
 _sendData() {
-  
-    const button = document.getElementById('login-form');
     const produit =  {
-        productPermalink: $('#productPermalink').val() ,
-          productTitle : $('#productTitle').val(),
-          productPrice : $('#productPrice').val() ,
-          productDescription : $('#productDescription').val() , 
-          productPublished : $('#productPublished').val() , 
-          productTags : $('#productTags').val(),
-          productOptions : $('#productOptions').val() , 
-          productImage : $('#productImage').val() ,
+        productPermalink: this.$.productPermalink.value ,
+          productTitle : this.$.productTitle.value,
+          productPrice : this.$.productPrice.value ,
+          productDescription : this.$.productDescription.value , 
+          productPublished : this.$.productPublished.value , 
+          productTags :this.$.productTags.value,
+          productOptions : this.$.productOptions.value , 
+          productImage : this.$.productImage.value ,
        
     };
-
-    
+    console.log ('product', produit)
+    fetch('http://localhost:3000/post-product', 
+      {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          // "Content-Type": "application/x-www-form-urlencoded",
+        }, 
+        body: JSON.stringify(produit)
+      })
+    .then(function(response) {
+      if(response.ok) {
+        console.log('product was recorded');
+        return;
+      }
+      throw new Error('Request failed.');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
     /*https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch*/ 
-    button.addEventListener('click', function(e) {
-      console.log('button was clicked');
-    
-      fetch('/clicked', {method: 'POST'},{body: produit})
-        .then(function(response) {
-          if(response.ok) {
-            console.log('product was recorded');
-            return;
-          }
-          throw new Error('Request failed.');
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    });
 
 
 }
 
 
-/*
- // Execute JavaScript on page load
- async functio() {
-    // Intercept form submission and submit the form with ajax
-    $('#contactForm').on('submit', function(e) {
-        // Prevent submit event from bubbling and automatically submitting the
-        // form
-        e.preventDefault();
-
-        // Call our ajax endpoint on the server to initialize the phone call
-        $.ajax({
-            url: '/clicked',
-            method: 'POST',
-            dataType: 'json',
-            data: {
-                productPermalink: $('#productPermalink').val() ,
-                  productTitle : $('#productTitle').val(),
-                  productPrice : $('#productPrice').val() ,
-                  productDescription : $('#productDescription').val() , 
-                  productPublished : $('#productPublished').val() , 
-                  productTags : $('#productTags').val(),
-                  productOptions : $('#productOptions').val() , 
-                  productImage : $('#productImage').val() ,
-               
-            }
-        }).done(function(data) {
-            // The JSON sent back from the server will contain a success message
-            alert(data.message);
-        }).fail(function(error) {
-            alert(JSON.stringify(error));
-        });
-    });
-}
-*/
 
 }
 
