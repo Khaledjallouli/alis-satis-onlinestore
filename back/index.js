@@ -56,6 +56,26 @@ app.post('/post-product', async function (req, res,next) {
 https://www.twilio.com/docs/voice/tutorials/click-to-call-node-express
 https://stackoverflow.com/questions/4295782/how-do-you-extract-post-data-in-node-js */
  /*https://expressjs.com/en/4x/api.html#req.body*/ 
+// add a document to the DB collection recording add product event
+/*app.post('/post-product', (req, res) => {
+                   
+                    console.log(req.body);
+  res.json(req.body);
+  console.log(product);
+  const db = database.db('test');
+  db.collection('products').save(product, (err, result) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('product added to db');
+    res.sendStatus(201);
+  });
+
+});
+
+
+*/
+
 
 
 
